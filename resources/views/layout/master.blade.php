@@ -45,7 +45,7 @@
                                 </div>
                               
                                 <div class="row">
-                                    <div class="col-sm-10"><input type="submit" value="Submit"
+                                    <div class="col-sm-12"><input type="submit" value="Submit"
                                             class="btn" /></div>
                                 </div>
                                

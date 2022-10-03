@@ -62,34 +62,55 @@
                     
                         <h1 class="bg-success text-light text-center py-2">SSC Information</h1>
                         <div class="group-inputs">
+                            <label for="sel1">Examination</label>
+                            <select class="form-control" id="sel1" name="ssc_exam">
+                                <option>SSC</option>
+                                <option>Dakhil</option>
+                            </select>
+                        </div>
+
+                        <div class="group-inputs">
                             <label for="board">Board</label>
-                            <input type="text" name="board" />
+                            <select class="form-control" id="sel1" name="ssc_board">
+                                <option>Dhaka</option>
+                                <option>Rajshahi</option>
+                                <option>Comilla</option>
+                                <option>Jessore</option>
+                                <option>Chittagong</option>
+                                <option>Barisal</option>
+                                <option>Sylhet</option>
+                                <option>Dinajpur</option>
+                                <option>Madrasah</option>
+                            </select>
                         </div>
 
                         <div class="group-inputs">
                             <label for="group">Group</label>
-                            <input type="text" name="group" />
+                            <select class="form-control" id="sel1" name="ssc_group">
+                                <option>Science</option>
+                                <option>Commerce</option>
+                            </select>
                         </div>
 
 
                         <div class="group-inputs">
                             <label for="ID">Roll No</label>
-                            <input type="number" name="roll" />
+                            <input type="number" name="ssc_roll" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">Registration No</label>
-                            <input type="number" name="registrationNo" />
+                            <input type="number" name="ssc_registrationNo" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA (without additional subject)</label>
-                            <input type="number" name="gpaaditional" />
+                            <input type="number" name="ssc_gpaaditional" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA</label>
-                            <input type="number" name="gpa" />
+                            <input type="number" name="ssc_gpa" />
                         </div>
 
                    
@@ -99,41 +120,63 @@
                     
                         <h1 class="bg-success text-light text-light text-center py-2 ">HSC Information</h1>
                         <div class="group-inputs">
+                            <label for="sel1">Examination</label>
+                            <select class="form-control" id="sel1" name="hsc_exam">
+                                <option>HSC</option>
+                                <option>Alim</option>
+                            </select>
+                        </div>
+                        
+                        
+                        <div class="group-inputs">
                             <label for="board">Board</label>
-                            <input type="text" name="board" />
+                            <select class="form-control" id="sel1" name="hsc_board">
+                                <option>Dhaka</option>
+                                <option>Rajshahi</option>
+                                <option>Comilla</option>
+                                <option>Jessore</option>
+                                <option>Chittagong</option>
+                                <option>Barisal</option>
+                                <option>Sylhet</option>
+                                <option>Dinajpur</option>
+                                <option>Madrasah</option>
+                            </select>
                         </div>
 
                         <div class="group-inputs">
                             <label for="group">Group</label>
-                            <input type="text" name="group" />
+                            <select class="form-control" id="sel1" name="hsc_group">
+                                <option>Science</option>
+                                <option>Commerce</option>
+                            </select>
                         </div>
 
 
                         <div class="group-inputs">
                             <label for="ID">Roll No</label>
-                            <input type="number" name="roll" />
+                            <input type="number" name="hsc_roll" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">Registration No</label>
-                            <input type="number" name="registrationNo" />
+                            <input type="number" name="hsc_registrationNo" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA (without additional subject)</label>
-                            <input type="number" name="gpaaditional" />
+                            <input type="number" name="hsc_gpaaditional" />
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA</label>
-                            <input type="number" name="gpa" />
+                            <input type="number" name="hsc_gpa" />
                         </div>
                     
                 
 
 
                 <div class="row">
-                    <div class="col-sm-10"><input type="submit" value="Submit" class="btn" data-toggle="modal"
+                    <div class="col-sm-12"><input type="submit" value="Submit" class="btn btn-primary" data-toggle="modal"
                             data-target="#emailSentModal" /></div>
                 </div>
 

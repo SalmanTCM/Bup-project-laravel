@@ -11,14 +11,23 @@ class CertificateInfo extends Model
 
     protected $fillable = [
         'user_id',
+        'refarence_id',
         'fname', 
-        'mname', 
-        'board',
-        'group',  
-        'dob', 
-        'roll',
-        'registrationNo',
-        'gpaaditional',
-        'gpa'        
+        'mname',
+        'dob',
+        'ssc_exam', 
+        'ssc_board',
+        'ssc_group',   
+        'ssc_roll',
+        'ssc_registrationNo',
+        'ssc_gpaaditional',
+        'ssc_gpa',
+        'hsc_exam',
+        'hsc_board',
+        'hsc_group',
+        'hsc_roll',
+        'hsc_registrationNo',
+        'hsc_gpaaditional',
+        'hsc_gpa',
     ];
 }

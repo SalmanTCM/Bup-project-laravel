@@ -16,15 +16,24 @@ return new class extends Migration
         Schema::create('certificate_infos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('refarence_id');
             $table->string('fname');
             $table->string('mname');
-            $table->string('board');
-            $table->string('group');
             $table->string('dob');
-            $table->string('roll');
-            $table->string('registrationNo');
-            $table->string('gpaaditional');
-            $table->string('gpa');
+            $table->string('ssc_exam');
+            $table->string('ssc_board');
+            $table->string('ssc_group'); 
+            $table->string('ssc_roll');
+            $table->string('ssc_registrationNo');
+            $table->string('ssc_gpaaditional');
+            $table->string('ssc_gpa');
+            $table->string('hsc_exam');
+            $table->string('hsc_board');
+            $table->string('hsc_group');
+            $table->string('hsc_roll');
+            $table->string('hsc_registrationNo');
+            $table->string('hsc_gpaaditional');
+            $table->string('hsc_gpa');
             $table->rememberToken();
             $table->timestamps();
             

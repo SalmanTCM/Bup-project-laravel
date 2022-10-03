@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CertificateInfo;
 use Illuminate\Http\Request;
 
+
 class CertificateInfoController extends Controller
 {
    
@@ -42,20 +43,29 @@ class CertificateInfoController extends Controller
             [
                 // 'user_id'=>['required'],
                 'fname' => ['required', 'string', 'max:255'],
+                // 'refarence_id' => ['required'],
                 'mname' => ['required', 'string', 'max:255'],
-                'board' => ['required', 'string', 'max:255'],
-                'group' => ['required', 'string', 'max:255'],
                 'dob' => ['required', 'string', 'max:255'],
-                'roll' => ['required', 'string', 'max:255'],
-                'registrationNo' => ['required', 'string', 'max:255'],
-                'gpaaditional' => ['required', 'string', 'max:255'],
-                'gpa' => ['required', 'string', 'max:255'],
-                
+                'ssc_exam' => ['required', 'string', 'max:255'],
+                'ssc_board' => ['required', 'string', 'max:255'],
+                'ssc_group' => ['required', 'string', 'max:255'],
+                'ssc_roll' => ['required', 'string', 'max:255'],
+                'ssc_registrationNo' => ['required', 'string', 'max:255'],
+                'ssc_gpaaditional' => ['required', 'string', 'max:255'],
+                'ssc_gpa' => ['required', 'string', 'max:255'],
+                'hsc_exam' => ['required', 'string', 'max:255'],
+                'hsc_board' => ['required', 'string', 'max:255'],
+                'hsc_group' => ['required', 'string', 'max:255'],
+                'hsc_roll' => ['required', 'string', 'max:255'],
+                'hsc_registrationNo' => ['required', 'string', 'max:255'],
+                'hsc_gpaaditional' => ['required', 'string', 'max:255'],
+                'hsc_gpa' => ['required', 'string', 'max:255'],                
             ]
         );
         // dd($request->session()->get('user')->id);
             $data['user_id']=$request->session()->get('user')->id;
-            
+            // $data->refarence_id = rand();
+            $data['refarence_id']=rand(1,1000000000);
         
         if ($data){
            
