@@ -24,17 +24,17 @@
   <tbody>
     <tr>
       <th scope="row">CSE</th>
-      <td><a href="{{url('/certificateinfo')}}" class="btn btn-primary" style="height:50px; width:150px">apply now</a></td>
+      <td><a href="{{url('/certificateinfo')}}"  style="height:50px; width:150px">apply now</a></td>
     
     </tr>
     <tr>
       <th scope="row">EEE</th>
-      <td><a href="" class="btn" style="height:50px; width:150px">apply now</a></td>
+      <td><a href=""  style="height:50px; width:150px">apply now</a></td>
     
     </tr>
     <tr>
       <th scope="row">ECE</th>
-      <td><a href="" class="btn" style="height:50px; width:150px">apply now</a></td>
+      <td><a href=""  style="height:50px; width:150px">apply now</a></td>
       
     </tr>
   </tbody>

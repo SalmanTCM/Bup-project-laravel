@@ -9,6 +9,7 @@
 <link rel="BUP" href="images/logo.png">
 <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}">
 <link type="text/css" rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
+<link href="{{url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')}}" rel="stylesheet">
 </head>
 
 <body class="">
