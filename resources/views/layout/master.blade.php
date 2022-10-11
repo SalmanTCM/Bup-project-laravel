@@ -9,7 +9,7 @@
 <link rel="BUP" href="images/logo.png">
 <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}">
 <link type="text/css" rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
-<link href="{{url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
 </head>
 
 <body class="">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
             </div><a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button"
-                data-slide="prev"><span class="fa fa-angle-left" aria-hidden="true"></span><span
+                data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i><span
                     class="sr-only">Previous</span></a><a class="new-effect carousel-control-next"
                 href="#carouselExampleControls" role="button" data-slide="next"><span class="fa fa-angle-right"
                     aria-hidden="true"></span><span class="sr-only">Next</span></a>
