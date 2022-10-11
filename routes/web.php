@@ -29,6 +29,10 @@ Route::get('/confirmmsg', function () {
     return view('pages.confirmmsg');
 });
 
+Route::get('/applicationform', function () {
+    return view('pages.applicationForm');
+});
+
 Route::post('/dataRegister', [UsersController::class, 'dataStore'])->name("dataRegister");
 Route::get('/registration/course', [UsersController::class, 'courseRegistration'])->name("courseRegistration");
 Route::get('/certificateinfo', [UsersController::class, 'certificateinfo'])->name("certificateinfo");

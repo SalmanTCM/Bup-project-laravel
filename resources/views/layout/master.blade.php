@@ -58,6 +58,7 @@
             </div>
         </div>
     </div>
+    
     <header class="top-navbar">
         <div class="navtop"></div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -91,7 +92,7 @@
                                     href="">CSE</a><a class="dropdown-item" href="">EEE</a><a class="dropdown-item"
                                     href="">ECE</a></div>
                         <li class="nav-item"><a class="nav-link" href="">Student</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">ALUMNI</a></li>
+                        <li class="nav-item"><a class="btn btn-success nav-link px-3 text-light" href="">login</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
