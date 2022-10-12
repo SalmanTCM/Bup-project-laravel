@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('dob');
             $table->string('ssc_exam');
             $table->string('ssc_board');
+            $table->string('ssc_year');
             $table->string('ssc_group'); 
             $table->string('ssc_roll');
             $table->string('ssc_registrationNo');
@@ -29,6 +30,7 @@ return new class extends Migration
             $table->string('ssc_gpa');
             $table->string('hsc_exam');
             $table->string('hsc_board');
+            $table->string('hsc_year');
             $table->string('hsc_group');
             $table->string('hsc_roll');
             $table->string('hsc_registrationNo');

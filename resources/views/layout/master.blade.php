@@ -9,10 +9,48 @@
 <link rel="BUP" href="images/logo.png">
 <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}">
 <link type="text/css" rel="stylesheet" href="{{asset('/assets/css/style.css')}}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
 <body class="">
+    <!-- login modal -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        
+                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        
+                    </div>
+
+                    <div class="md-form mb-4">
+                       
+                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                      
+                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                       
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-default bg-success font-weight-bold px-4 ">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-right px-5">
+        <a href="" class="btn-rounded" data-toggle="modal" data-target="#modalLoginForm">Login </a>
+    </div>
+    <!-- signup modal -->
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -25,31 +63,35 @@
                     <!-- modal -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="Login">
-                             <!-- Validation Errors -->
-                             <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                            <!-- Validation Errors -->
+                            <x-auth-validation-errors class="mb-4" :errors="$errors" />
                             <form role="form" action="{{ route('dataRegister')}}" method="POST" class="form" id="forms">
 
                                 @csrf
                                 @method("POST")
                                 <div class="form-group">
-                                    <div class="col-sm-12"><label for="Name">Name</label><x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-                                </div>
+                                    <div class="col-sm-12"><label for="Name">Name</label>
+                                        <x-text-input id="name" class="block mt-1 w-full" type="text" name="name"
+                                            :value="old('name')" required autofocus />
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12"><label for="Email"> Email</label>
-                                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required /></div>
+                                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
+                                            :value="old('email')" required />
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12"><label for="">Mobile No</label>
-                                    <x-text-input id="email" class="block mt-1 w-full" type="mobile" name="mobile" :value="old('mobile')" required />
+                                        <x-text-input id="email" class="block mt-1 w-full" type="mobile" name="mobile"
+                                            :value="old('mobile')" required />
+                                    </div>
                                 </div>
-                                </div>
-                              
+
                                 <div class="row">
-                                    <div class="col-sm-12"><input type="submit" value="Submit"
-                                            class="btn" /></div>
+                                    <div class="col-sm-12"><input type="submit" value="Submit" class="btn" /></div>
                                 </div>
-                               
+
                             </form>
                         </div>
                         <!-- <div class="tab-pane" id="Registration"><form role="form" class="form-horizontal"><div class="form-group"><div class="col-sm-12"><input class="form-control" placeholder="Name" type="text"></div></div><div class="form-group"><div class="col-sm-12"><input class="form-control" id="email" placeholder="Email" type="email"></div></div><div class="form-group"><div class="col-sm-12"><input class="form-control" id="mobile" placeholder="Mobile" type="email"></div></div><div class="form-group"><div class="col-sm-12"><input class="form-control" id="password" placeholder="Password"type="password"></div></div><div class="row"><div class="col-sm-10"><button type="button" class="btn btn-light btn-radius btn-brd grd1">Save &amp; Continue</button><button type="button" class="btn btn-light btn-radius btn-brd grd1">Cancel</button></div></div></form></div>-->
@@ -58,7 +100,7 @@
             </div>
         </div>
     </div>
-    
+
     <header class="top-navbar">
         <div class="navtop"></div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -84,7 +126,8 @@
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-a"
                                 data-toggle="dropdown">Admission </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown-a"><button class="dropdown-item" data-toggle="modal" data-target="#login">Apply Online </button></div>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a"><button class="dropdown-item"
+                                    data-toggle="modal" data-target="#login">Apply Online </button></div>
                         </li>
                         <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" id="dropdown-a"
                                 data-toggle="dropdown">Faculty</a>
@@ -92,7 +135,7 @@
                                     href="">CSE</a><a class="dropdown-item" href="">EEE</a><a class="dropdown-item"
                                     href="">ECE</a></div>
                         <li class="nav-item"><a class="nav-link" href="">Student</a></li>
-                        <li class="nav-item"><a class="btn btn-success nav-link px-3 text-light" href="">login</a></li>
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -153,8 +196,8 @@
         </div>
     </div>
 
-  
-@yield('content')
+
+    @yield('content')
 
     <footer class="footer">
         <div class="container">
