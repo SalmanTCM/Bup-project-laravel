@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-<section>
+<section >
         <div class="gallary">
             <div class="container p-5 ml-auto">
                 <div class="title">
@@ -22,7 +22,7 @@
         </div>
     </section>
     <div style="height: 50px;"></div><br style="clear:both;" />
-    <section class="h-auto w-auto">
+    <section class="h-auto w-auto" style="overflow-y: hidden">
         <div class="notice">
             <div class="container">
                 <div class="title">
