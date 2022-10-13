@@ -9,8 +9,7 @@
     <!-- <link rel="stylesheet" href="{{asset('/assets/css/bootstrap.min.css')}}"> -->
     <!-- <link type="text/css" rel="stylesheet" href="{{asset('/assets/css/style.css')}}"> -->
     <link rel="stylesheet" href="{{ url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')}}">
-    <link rel="stylesheet"
-        href="{{ url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">
 </head>
 
 <body>
@@ -38,7 +37,7 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login <span
+                        <li><a href="{{ route('signout') }}"><span class="glyphicon glyphicon-user"></span> logout <span
                                     class="caret"></span></a>
                         </li>
                     </ul>
@@ -58,7 +57,13 @@
                             </h4>
                     </div>
                     <div class="panel-body">
-                        <div class="rules">
+                        <div class="top flex d-inline-block">
+                        <div class=" d-inline-block text-center bg-success w-auto col-lg-3 mx-auto px-2 col-sm-3" style="width:200px; height:200px;">
+                           
+                           <h4> paste you image here</h4>
+                    
+                        </div>
+                        <div class="rules col-lg-8 col-sm-8  d-inline-block container-fluid">
                             <h4 class="font-weight-bold ">IMPORTANT INSTRUCTIONS:</h4>
                             <p class="font-weight-bold ">
                                 1. Please tick the box according to the program applied for. <br>
@@ -69,15 +74,19 @@
                                 4. The candidate is advised to select the subject of his/her choice for admission very
                                 carefully.
                             </p>
+                            
                         </div>
-                        <div class="form-check p-5">
+                        
+                        </div>
+                        <div class="form-check p-5 col-lg-12">
                         <h4 class="fw-bold">Appyling for:</h4>
                             <input class="form-check-input" type="checkbox" value="" id="">
                             <label class="form-check-label" for=""> Undergraduate</label>
                             <input class="form-check-input" type="checkbox" value="" id="">
                             <label class="form-check-label" for=""> Postgraduate</label>
-                            <input class="form-check-input" type="checkbox" value="" id="">
                             <br>
+                            <input class="form-check-input" type="checkbox" value="" id="">
+                            
                             <label class="form-check-label" for=""> CSE</label>
                             <input class="form-check-input" type="checkbox" value="" id="">
                             <label class="form-check-label" for=""> EEE</label>
@@ -85,7 +94,7 @@
                             <label class="form-check-label" for=""> ECE</label>
                         </div>
 
-                        <div class="form-check p-5">
+                        <div class="form-check p-5 col-lg-12">
                         <h4 class="fw-bold">Program:</h4>
                             <input class="form-check-input" type="checkbox" value="" id="">
                             <label class="form-check-label" for=""> Morning</label>

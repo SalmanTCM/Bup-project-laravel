@@ -17,6 +17,11 @@
     <!-- login modal -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
+        @if($message = Session::get('success'))
+        <div class="alert alert-info">
+        {{ $message }}
+        </div>
+        @endif
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
@@ -26,29 +31,40 @@
                     </button>
                 </div>
                 <div class="modal-body mx-3">
+                <form method="POST" action="{{ route('login.custom') }}">
+                            @csrf
+                            <!-- @method("POST") -->
                     <div class="md-form mb-5">
                         
                         <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
+                        <input type="email" id="defaultForm-email" class="form-control validate"  name="email" required>
+                        @if($errors->has('email'))
+							<span class="text-danger">{{ $errors->first('email') }}</span>
+						@endif
                         
                     </div>
 
                     <div class="md-form mb-4">
                        
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        <label data-error="wrong" data-success="right" for="defaultForm-pphp ass">Your password</label>
                       
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
+                        <input type="password" id="defaultForm-pass" class="form-control" name="password">
+                        @if($errors->has('password'))
+							<span class="text-danger">{{ $errors->first('password') }}</span>
+						@endif
                        
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-default bg-success font-weight-bold px-4 ">Login</button>
+                <div class="row">
+                         <div class="col-sm-12"><input type="submit" value="Submit" class="btn" /></div>
                 </div>
+
+</form>
             </div>
         </div>
     </div>
     <div class="text-right px-5">
-        <a href="" class="btn-rounded" data-toggle="modal" data-target="#modalLoginForm">Login </a>
+        <a href="" class="btn-rounded btnn" data-toggle="modal" data-target="#modalLoginForm">Login </a>
     </div>
     <!-- signup modal -->
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\CertificateInfoController;
+use App\Http\Controllers\CustomAuthController;
+
 
 
 Route::get('/', function () {
@@ -39,6 +41,10 @@ Route::get('/certificateinfo', [UsersController::class, 'certificateinfo'])->nam
 Route::get('/confirmmsg', [UsersController::class, 'confirmmsg'])->name("confirmmsg");
 
 Route::post('/infoRegister', [CertificateInfoController::class, 'store'])->name("infoRegister");
+
+Route::post('/applicationform', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
 
 
 // Route::auth();
