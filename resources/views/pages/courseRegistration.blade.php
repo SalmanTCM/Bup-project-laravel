@@ -53,6 +53,11 @@
         overflow: hidden;
         display: none;
     }
+    .btnn{
+      visibility: hidden;
+        overflow: hidden;
+        display: none;
+    }
 </style>
 <!-- <script>
     $(".carouselExampleControls").hide();
