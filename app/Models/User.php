@@ -6,6 +6,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -21,6 +24,8 @@ class User extends Authenticatable
         'name',
         'email',
         'mobile',
+        'password',
+        'tempPass'
     ];
 
     /**
@@ -30,7 +35,9 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'remember_token',
+        'password', 'remember_token',
     ];
+  
 
     /**
      * The attributes that should be cast.
@@ -40,4 +47,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function save( array $options = [] ) {
+        if ( ! $this->exists && empty( $this->getAttribute( 'password','tempPass' ) ) ) {
+            $this->tempPass = Str::random( 9 );
+            $this->attributes['tempPass'] = $this->tempPass;
+            $this->attributes['password'] = Hash::make( $this->attributes['tempPass'] );
+
+        }
+        return parent::save( $options );
+    }
+
+    
+
+    // public function setPasswordAttribute( $value ) {
+    //     if ( ! empty( $value ) ) {
+    //         $this->attributes['tempPass'] = Hash::make( $value );
+    //         $this->attributes['password'] = $this->attributes['tempPass'];
+            
+    //     }
+    //     return parent::save( $value );
+    // }
 }
