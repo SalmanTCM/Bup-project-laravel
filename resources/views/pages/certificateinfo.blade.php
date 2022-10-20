@@ -166,12 +166,12 @@
 
                         <div class="group-inputs">
                             <label for="ID">GPA (without additional subject)</label>
-                            <input type="number" name="ssc_gpaaditional" />
+                            <input type="number" name="ssc_gpaaditional" step="any"/>
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA</label>
-                            <input type="number" name="ssc_gpa" />
+                            <input type="number" name="ssc_gpa" step="any"/>
                         </div>
 
                    
@@ -286,12 +286,12 @@
 
                         <div class="group-inputs">
                             <label for="ID">GPA (without additional subject)</label>
-                            <input type="number" name="hsc_gpaaditional" />
+                            <input type="number" name="hsc_gpaaditional" step="any"/>
                         </div>
 
                         <div class="group-inputs">
                             <label for="ID">GPA</label>
-                            <input type="number" name="hsc_gpa" />
+                            <input type="number" name="hsc_gpa" step="any"/>
                         </div>
                     
                 
