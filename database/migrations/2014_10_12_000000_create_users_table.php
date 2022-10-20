@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('tempPass', 60);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('mobile')->unique();
+            $table->string('status')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
