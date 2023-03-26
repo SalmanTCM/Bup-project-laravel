@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('fname');
             $table->string('mname');
             $table->string('dob');
+            $table->string('nid');
             $table->string('ssc_exam');
             $table->string('ssc_board');
             $table->string('ssc_year');

@@ -46,6 +46,7 @@ class CertificateInfoController extends Controller
                 // 'refarence_id' => ['required'],
                 'mname' => ['required', 'string', 'max:255'],
                 'dob' => ['required', 'string', 'max:255'],
+                'nid' => ['required', 'string', 'max:255'],
                 'ssc_exam' => ['required', 'string', 'max:255'],
                 'ssc_board' => ['required', 'string', 'max:255'],
                 'ssc_year' => ['required', 'string', 'max:255'],

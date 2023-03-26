@@ -56,7 +56,10 @@
                     <label for="dob">Date of Birth</label>
                     <input type="date" name="dob" />
                 </div>
-
+                <div class="group-inputs">
+                    <label for="nid">NID Number</label>
+                    <input type="text" name="nid" />
+                </div>
 
                 
                     

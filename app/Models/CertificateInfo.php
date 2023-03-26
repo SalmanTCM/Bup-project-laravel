@@ -15,6 +15,7 @@ class CertificateInfo extends Model
         'fname', 
         'mname',
         'dob',
+        'nid',
         'ssc_exam', 
         'ssc_board',
         'ssc_year',
